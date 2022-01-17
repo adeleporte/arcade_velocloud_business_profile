@@ -1,0 +1,73 @@
+{
+    "author": "adeleporte@vmware.com",
+    "description": "Create a business policy",
+    "title": "Velocloud Automation",
+    "template": "https://github.com/adeleporte/arcade_velocloud_business_profile.git",
+    "documentation": "https://github.com/adeleporte/arcade_velocloud_business_profile",
+    "type": "sd-wan",
+    "runner": "amimran/terraform-runner",
+    "tags": ["sd-wan", "terraform"],
+    "arcade_json": "https://raw.githubusercontent.com/adeleporte/arcade_velocloud_business_profile/main/arcade.json",
+    "actions": [
+        {
+            "command": "terraform init -no-color",
+            "name": "INIT"
+        },
+        {
+            "command": "terraform plan -no-color",
+            "name":"PLAN"
+        },
+        {
+            "command": "terraform apply --auto-approve -no-color",
+            "name": "APPLY"
+        },
+        {
+            "command": "terraform destroy --auto-approve -no-color",
+            "name": "DESTROY"
+        }
+    ],
+    "variables": [
+        {
+            "description": "VCO address",
+            "name": "TF_VAR_vco",
+            "default": "",
+            "type": "INPUT",
+            "required": true
+        },
+        {
+            "description": "VCO token",
+            "name": "TF_VAR_token",
+            "default": "",
+            "type": "INPUT",
+            "required": true
+        },
+        {
+            "description": "Profile Name",
+            "name": "TF_VAR_profile_name",
+            "default": "",
+            "type": "INPUT",
+            "required": true
+        },
+        {
+            "description": "IP address",
+            "name": "TF_VAR_ip",
+            "default": "",
+            "type": "INPUT",
+            "required": true
+        },
+        {
+            "description": "TCP port",
+            "name": "TF_VAR_port",
+            "default": "",
+            "type": "INPUT",
+            "required": true
+        },
+        {
+            "description": "Bandwidth Limit",
+            "name": "TF_VAR_bw",
+            "default": "",
+            "type": "INPUT",
+            "required": true
+        }
+    ]
+}
