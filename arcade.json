@@ -4,7 +4,7 @@
     "title": "Velocloud Automation",
     "template": "https://github.com/adeleporte/arcade_velocloud_business_profile.git",
     "documentation": "https://github.com/adeleporte/arcade_velocloud_business_profile",
-    "type": "sd-wan",
+    "type": "sdwan",
     "runner": "amimran/terraform-runner",
     "tags": ["sd-wan", "terraform"],
     "arcade_json": "https://raw.githubusercontent.com/adeleporte/arcade_velocloud_business_profile/main/arcade.json",
